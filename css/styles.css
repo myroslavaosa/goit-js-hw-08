@@ -1,0 +1,43 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 24px;
+    list-style: none;
+    padding: 24px 156px;
+    margin: 0;
+}
+
+.gallery-item img {
+    display: block;
+    width: 360px;
+    height: 200px;
+    cursor: pointer;
+}
+
+body.show-modal .backdrop {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+.backdrop {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(46, 47, 66, 0.8);
+
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+}
+
+.modal {
+    width: 1112px;
+    height: 640px;
+}
